@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Excalifont";
+  src: url("./fonts/Excalifont.woff2") format("woff2"),
+    url("./fonts/Excalifont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Excalifont", "Comic Sans MS", cursive, sans-serif;
+  font-weight: 700;
+
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.toolbar {
+  width: max-content;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  background-color: rgba(126, 125, 125, 0.263);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(135, 133, 133, 0.1);
+  padding: 6px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.toolbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 7px;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.297);
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.toolbar button.active {
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.toolbar small , .style {
+  color: white;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toolbar small:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282c34;
+  cursor: crosshair;
+}
+
+body,
+html,
+#root,
+.App {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.toolbar input[type="color"] {
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.toolbar input[type="color"]::-webkit-color-swatch {
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.toolbar svg {
+  fill: white;
+}
+
+
+.toolbar input[type="range"] {
+  width: 100px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.toolbar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toolbar input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toolbar input[type="range"]:hover {
+  background: rgba(255, 255, 255, 0.5);
+} 
+
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toolbar label:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .canvas-container{
+    display: none;
+  }
+
+  .toolbar{
+    display: none;
+  }
+
+  .mobileView{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #282c34;
+    color: white;
+    font-family: Excalifont, "Comic Sans MS", cursive, sans-serif;
+  }
+
+  .mobileView h1{
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    
+  }
+}
