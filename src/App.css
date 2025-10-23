@@ -161,6 +161,7 @@ html,
   }
 
   .mobileView{
+    z-index: 1098;
     display: flex;
     justify-content: center;
     align-items: center;
