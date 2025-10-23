@@ -378,18 +378,12 @@ export default function Home() {
     render.readAsText(file);
   };
 
-  // const toggleTheme = () => {
-  //   setTheme((prev) => {
-  //     localStorage.setItem("theme", prev === "dark" ? "light" : "dark");
-
-  //     return prev === "dark" ? "light" : "dark";
-  //   });
-  // };
+  
 
   return (
     <>
     <div className="mobileView">
-      <h1>For better experience use in Desktop/Laptop</h1>
+      <h1>For better experience use in Desktop/Laptop </h1>
     </div>
       <div
         className="toolbar"
