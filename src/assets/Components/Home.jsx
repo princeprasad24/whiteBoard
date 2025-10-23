@@ -378,18 +378,12 @@ export default function Home() {
     render.readAsText(file);
   };
 
-  // const toggleTheme = () => {
-  //   setTheme((prev) => {
-  //     localStorage.setItem("theme", prev === "dark" ? "light" : "dark");
-
-  //     return prev === "dark" ? "light" : "dark";
-  //   });
-  // };
+  
 
   return (
     <>
     <div className="mobileView">
-      <h1>For better experience use in Desktop/Laptop</h1>
+      <h1>For better experience use in Desktop/Laptop </h1>
     </div>
       <div
         className="toolbar"
@@ -586,12 +580,11 @@ export default function Home() {
 
       <button style={{ padding: "0" }}></button>
 
-      <button>kgv</button>
       {/* <button onClick={toggleTheme}>
         {theme === "dark" ? "Light " : "Dark "} Theme
       </button> */}
 
-      <canvas
+      <div className="canvas-container"><canvas
         ref={canvasRef}
         id="canvas"
         onMouseDown={Down}
@@ -605,7 +598,7 @@ export default function Home() {
           cursor: mouseMove ? "crosshair" : "default",
           display: "block",
         }}
-      />
+      /></div>
     </>
   );
 }
